@@ -1,0 +1,109 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+  min-height: 6.25rem;
+}
+header .nav {
+  display: flex;
+  gap: 5.25rem;
+}
+header .nav .nav-ul {
+  display: flex;
+  gap: 2.625rem;
+}
+header .nav .nav-ul .nav-li a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+.main .main-manifest {
+  background-image: url(./src/image/bg-main-manifest.png);
+  max-width: 100%;
+  min-width: 48rem;
+  min-height: 37.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main .main-manifest h1 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  color: #000000;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  width: 50%;
+  padding-inline-start: 8.43rem;
+}
+.main .main-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+}
+.main .main-blog h2 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  color: #000000;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+.main .main-blog .blog-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+.main .main-blog .blog-wrapper .pointer-section {
+  display: flex;
+  gap: 30px;
+}
+.main .main-blog .blog-wrapper .pointer-section .pointer {
+  min-width: 570px;
+  max-width: 50%;
+  background-color: #565656;
+  height: 470px;
+}
+.main .main-blog .blog-wrapper .pointer-section .blog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 570px;
+}
+.main .main-blog .blog-wrapper .building-section {
+  display: flex;
+  gap: 30px;
+}
+.main .main-blog .blog-wrapper .building-section .blog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 570px;
+}
+.main .main-blog .blog-wrapper .building-section .building {
+  width: 570px;
+  background-color: #565656;
+  height: 470px;
+}
+
+/*# sourceMappingURL=index.css.map */

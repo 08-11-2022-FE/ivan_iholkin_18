@@ -1,0 +1,140 @@
+@mixin fontRedHatDisplay {font-family: 'Red Hat Display';
+                          font-style: normal;
+                          color: #000000;}
+
+@mixin fontLatoGrey {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 166%;
+    letter-spacing: 0.05em;
+    color: #565656
+}
+
+
+@mixin fontLatoNormal {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+@mixin fontLatoGreySmall {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+    color: #7B7B7B;
+}
+
+$background-footer-color: #F4F4F4;
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-inline-start: 8.43rem;
+    padding-inline-end: 8.43rem;
+    min-height: 6.25rem;
+    .nav{
+        display: flex;
+        gap: 5.25rem;
+        .nav-ul{
+            display: flex;
+            gap: 2.625rem;
+            .nav-li a{
+                text-decoration:none;
+                @include fontLatoNormal;
+                
+            }
+        }
+    }
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    .main-manifest{
+        background-image: url(./src/image/bg-main-manifest.png);
+        max-width: 100%;
+        min-width: 48rem;
+        min-height: 37.5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        h1{
+          @include fontRedHatDisplay; 
+          font-weight: 600;
+        font-size: 3rem;
+        line-height: 64px;
+        letter-spacing: 0.05em;
+        color: #000000;
+        width: 50%;
+        padding-inline-start: 8.43rem;
+        }
+    }
+    .main-blog{
+        display: flex;
+        flex-direction: column;
+        gap: 3.125rem;
+        padding-inline-start: 8.43rem;
+        padding-inline-end: 8.43rem;
+        h2{
+            @include fontRedHatDisplay;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 64px;
+            letter-spacing: 0.05em;
+            color: #000000;
+        }
+        .blog-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 100%;
+            .pointer-section{
+                display: flex;
+                // min-width: 100%;
+                gap: 30px;
+                .pointer{
+                    min-width: 570px;
+                    max-width: 50%;
+                    background-color:#565656;
+                    height: 470px;
+                }
+                .blog-text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 570px;
+                }
+            }
+            .building-section{
+                display: flex;
+                gap: 30px;
+                .blog-text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 570px;
+                }
+                .building{
+                    width: 570px;
+                    background-color:#565656;
+                    height: 470px;
+                }
+            }
+        }
+       
+    }
+
+}
