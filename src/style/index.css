@@ -55,6 +55,7 @@ header .nav .nav-ul .nav-li a {
 .main .main-blog {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 3.125rem;
   padding-inline-start: 8.43rem;
   padding-inline-end: 8.43rem;
@@ -70,40 +71,172 @@ header .nav .nav-ul .nav-li a {
   color: #000000;
 }
 .main .main-blog .blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1170px, 1fr));
+  gap: 50px;
+  width: 100%;
+}
+.main .main-blog .blog-wrapper .blog-item {
+  height: 470px;
+  display: flex;
+  gap: 30px;
+  max-width: 1170px;
+}
+
+.pointer-section .pointer {
+  background-image: url(./src/image/imagepointerblog.png);
+  background-color: #565656;
+  height: 100%;
+  width: 50%;
+}
+.pointer-section .blog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.building-section .building {
+  background-image: url(./src/image/imagepointerblog.png);
+  background-color: #565656;
+  height: 100%;
+  width: 50%;
+}
+.building-section .blog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.latest {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+  gap: 50px;
+}
+.latest .latest-tittle {
+  display: flex;
+  justify-content: space-between;
+}
+.latest .latest-wrapper {
   display: flex;
   flex-wrap: wrap;
-  min-width: 100%;
+  width: 100%;
+  justify-content: space-between;
 }
-.main .main-blog .blog-wrapper .pointer-section {
-  display: flex;
-  gap: 30px;
-}
-.main .main-blog .blog-wrapper .pointer-section .pointer {
-  min-width: 570px;
-  max-width: 50%;
-  background-color: #565656;
-  height: 470px;
-}
-.main .main-blog .blog-wrapper .pointer-section .blog-text {
+.latest .latest-wrapper .latest-item {
+  max-width: 370px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 570px;
+  gap: 20px;
+  justify-content: flex-start;
 }
-.main .main-blog .blog-wrapper .building-section {
+.latest .latest-wrapper .latest-item .lamp {
+  background-color: aqua;
+  width: 100%;
+  height: 260px;
+}
+.latest .latest-wrapper .latest-item .roof {
+  background-color: aqua;
+  width: 100%;
+  height: 260px;
+}
+.latest .latest-wrapper .latest-item .img-captch {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
 }
-.main .main-blog .blog-wrapper .building-section .blog-text {
+.latest .latest-wrapper .latest-item .latest-pointer {
+  background-color: aqua;
+  width: 100%;
+  height: 260px;
+}
+
+.popular {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 570px;
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+  gap: 50px;
 }
-.main .main-blog .blog-wrapper .building-section .building {
-  width: 570px;
-  background-color: #565656;
-  height: 470px;
+.popular .popular-tittle {
+  display: flex;
+  justify-content: space-between;
+}
+.popular .button {
+  align-self: center;
+}
+.popular .popular-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-between;
+}
+.popular .popular-wrapper .popular-item {
+  min-width: 50%;
+  max-width: 570px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.popular .popular-wrapper .popular-item .orange-lamp-img {
+  background-color: orange;
+  width: 100%;
+  max-width: 570px;
+  height: 260px;
+}
+.popular .popular-wrapper .popular-item .wall-img {
+  background-color: grey;
+  width: 100%;
+  max-width: 570px;
+  height: 260px;
+}
+.popular .popular-wrapper .popular-item .image-captch {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 570px;
+}
+
+.fulltime {
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+  gap: 20px;
+}
+.fulltime .fulltime-text {
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer {
+  padding-inline-start: 8.43rem;
+  padding-inline-end: 8.43rem;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+}
+footer p {
+  align-self: center;
+}
+footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1439) {
+  .latest-item {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
