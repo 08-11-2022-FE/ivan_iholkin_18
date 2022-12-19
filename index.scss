@@ -39,6 +39,9 @@ $background-footer-color: #F4F4F4;
 
 header{
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #F4F4F4;
     justify-content: space-between;
     align-items:center;
     padding-inline-start: 8.43rem;
@@ -64,8 +67,9 @@ header{
     display: flex;
     flex-direction: column;
     gap: 90px;
+    width: 100%;
     .main-manifest{
-        background-image: url(./src/image/bg-main-manifest.png);
+        background-image: url(/src/image/bg-main-manifest.png);
         max-width: 100%;
         min-width: 48rem;
         min-height: 37.5rem;
@@ -90,6 +94,7 @@ header{
         gap: 3.125rem;
         padding-inline-start: 8.43rem;
         padding-inline-end: 8.43rem;
+        box-sizing: border-box;
         h2{
             @include fontRedHatDisplay;
             font-weight: 400;
@@ -116,8 +121,8 @@ header{
 
 .pointer-section {
     .pointer{
-        background-image: url(./src/image/imagepointerblog.png);
-        background-color:#565656;
+        background-image: url(/src/image/imagepointerblog.png);
+        // background-color:#565656;
         height: 100%;
         width: 50%;
     }
@@ -131,8 +136,10 @@ header{
 
 .building-section{
     .building{
-        background-image: url(./src/image/imagepointerblog.png);
-        background-color:#565656;
+        background-image: url(/src/image/bg-main-manifest.png);
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
         height: 100%;
         width: 50%;
     }
@@ -170,12 +177,14 @@ header{
            gap: 20px;
            justify-content: flex-start;
            .lamp{
-            background-color:aqua;
+            background-image:url(/src/image/white-lamp.png);
+            background-position:center;
+            background-size:cover;
             width: 100%;
             height: 260px;
            }
            .roof{
-            background-color:aqua;
+            background-image:url(/src/image/roof.png);
             width: 100%;
             height: 260px;
            }
@@ -184,7 +193,8 @@ header{
             justify-content: space-between;
             }
             .latest-pointer{
-                background-color:aqua;
+                background-image:url(/src/image/imagepointerblog.png);
+                background-size:cover;
                 width: 100%;
                 height: 260px;
             }
@@ -221,13 +231,13 @@ header{
             gap: 20px;
             justify-content: flex-start; 
             .orange-lamp-img{
-                background-color:orange;
+                background-image:url(/src/image/orange-lamp.png);
                 width: 100%;
                 max-width: 570px;
                 height: 260px;
             }  
             .wall-img{
-                background-color:grey;
+                background-image:url(/src/image/wall.png);
                 width: 100%;
                 max-width: 570px;
                 height: 260px;
@@ -274,9 +284,29 @@ header{
     }
 
 
-    @media screen  and (max-width:1439) {
-        .latest-item{
-            flex-direction: row;
-            flex-wrap: nowrap;
+    @media  screen and (min-width:1440px) {
+        .nav-humburger{
+            display: none;
         }
+        
     }
+
+    @media screen and (max-width: 1439px) {
+        .nav-ul .nav-li{
+         display: none;
+        }
+        header, .fulltime, .popular, .latest, .main .main-blog{
+            padding-inline-start: 2.125rem;
+            padding-inline-end: 2.125rem;
+        }
+
+      }
+    
+    
+      @media screen and (max-width: 767px){
+        header, .fulltime, .popular, .latest, .main .main-blog{
+            padding-inline-start: 0.625rem;
+            padding-inline-end: 0.625rem;
+        }
+        
+      }
