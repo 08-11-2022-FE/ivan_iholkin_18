@@ -42,6 +42,7 @@ header{
     position: sticky;
     top: 0;
     background-color: #F4F4F4;
+    opacity: 0.8;
     justify-content: space-between;
     align-items:center;
     padding-inline-start: 8.43rem;
@@ -67,11 +68,11 @@ header{
     display: flex;
     flex-direction: column;
     gap: 90px;
-    width: 100%;
+    // max-width: 100%;
     .main-manifest{
         background-image: url(/src/image/bg-main-manifest.png);
         max-width: 100%;
-        min-width: 48rem;
+        // min-width: 48rem;
         min-height: 37.5rem;
         background-repeat: no-repeat;
         background-size: cover;
@@ -90,7 +91,7 @@ header{
     .main-blog{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        max-width: 100%;
         gap: 3.125rem;
         padding-inline-start: 8.43rem;
         padding-inline-end: 8.43rem;
@@ -105,9 +106,9 @@ header{
         }
         .blog-wrapper{
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(1170px,1fr));
             gap: 50px;
             width: 100%;
+            min-width: none;
             .blog-item{
                 height: 470px;
                 display: flex;
@@ -122,7 +123,8 @@ header{
 .pointer-section {
     .pointer{
         background-image: url(/src/image/imagepointerblog.png);
-        // background-color:#565656;
+        background-repeat:no-repeat;
+        background-size:cover;
         height: 100%;
         width: 50%;
     }
@@ -147,7 +149,6 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-      
         width: 50%;
     }
 }
@@ -180,11 +181,15 @@ header{
             background-image:url(/src/image/white-lamp.png);
             background-position:center;
             background-size:cover;
+            background-repeat:no-repeat;
             width: 100%;
             height: 260px;
            }
            .roof{
             background-image:url(/src/image/roof.png);
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
             width: 100%;
             height: 260px;
            }
@@ -215,6 +220,12 @@ header{
     }
     .button{
         align-self: center;
+        a{
+           text-decoration: none;
+           color:#FFFFFF;
+           padding: 9.5px 45px;
+           background: #565656;
+        }
     }
     .popular-wrapper{
         display: flex;
@@ -232,12 +243,16 @@ header{
             justify-content: flex-start; 
             .orange-lamp-img{
                 background-image:url(/src/image/orange-lamp.png);
+                background-size:cover;
+                background-repeat:no-repeat;
                 width: 100%;
                 max-width: 570px;
                 height: 260px;
             }  
             .wall-img{
                 background-image:url(/src/image/wall.png);
+                background-size:cover;
+                background-repeat:no-repeat;
                 width: 100%;
                 max-width: 570px;
                 height: 260px;
@@ -288,7 +303,9 @@ header{
         .nav-humburger{
             display: none;
         }
-        
+        .blog-wrapper{
+            grid-template-columns: repeat(auto-fit,minmax(1170px,1fr));
+        }
     }
 
     @media screen and (max-width: 1439px) {
@@ -299,8 +316,38 @@ header{
             padding-inline-start: 2.125rem;
             padding-inline-end: 2.125rem;
         }
+        .blog-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+            gap: 50px;
+            width: 100%;
+            min-width: none;
+                .blog-item{
+                    height: 470px;
+                    gap: 30px;
+                    width: 100%;
+                }
+        }
+        footer{
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            display: flex;
+            flex-direction: column;
+            p{
+                align-self:center;
+            }
+            .footer-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items:center;
+            }
+        }
 
-      }
+  }
+       
+
+      
     
     
       @media screen and (max-width: 767px){
@@ -308,5 +355,67 @@ header{
             padding-inline-start: 0.625rem;
             padding-inline-end: 0.625rem;
         }
-        
-      }
+        .blog-item{
+            flex-direction: column-reverse;
+        }
+        .building-section{
+            flex-direction: column;
+            .building{
+                order: 2;
+                width: 100%;
+            }
+            .blog-text{
+                order: 1;
+                width: 50%;
+            }
+        }
+        .pointer-section {
+            flex-direction: column;
+            .pointer{
+                width: 100%;
+                order: 2;
+            }
+            .blog-text{
+                width: 100%;
+            }
+        }
+        .latest{
+            gap: 30px;
+            .latest-tittle{
+             flex-direction: column;
+             }
+             .latest-wrapper{
+                justify-content: center;
+                 .latest-item{
+                    max-width: 100%; 
+                    min-height: 420px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    justify-content: space-between;
+                 }
+            
+             }
+         }
+         .popular{
+           gap: 30px;
+           .popular-tittle{
+            flex-direction: column;
+            }
+            
+            .popular-wrapper{
+                flex-direction: column;
+                gap: 50px;
+                 }
+            }
+            .fulltime{
+                flex-direction: column;
+                align-items: center;
+                padding-inline-start: 0.625rem;
+                padding-inline-end: 0.625rem;
+                gap: 50px;
+            }
+                
+        }
+     
+      
