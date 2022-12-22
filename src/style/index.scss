@@ -164,8 +164,6 @@ header{
     justify-content: space-between;
     }
     .latest-wrapper{
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -312,6 +310,43 @@ header{
         .nav-ul .nav-li{
          display: none;
         }
+        .nav-humburger input{
+            visibility: hidden;
+        }
+        .nav-humburger input + label{
+            cursor: pointer;
+        }
+        .humburger-ul{
+            display: none;
+            position: absolute;
+            left: -200px;
+            
+        }
+        .humburger-ul li a{
+            text-decoration: none;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        .humburger-ul li a:hover{
+            text-decoration: underline;
+        }
+        input[name="humburger"]:checked ~ ul{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 500px;
+            justify-content: space-around;
+            left: 50%;
+            
+        }
+
+      
         header, .fulltime, .popular, .latest, .main .main-blog{
             padding-inline-start: 2.125rem;
             padding-inline-end: 2.125rem;
