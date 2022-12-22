@@ -36,7 +36,7 @@ header .nav .nav-ul .nav-li a {
   gap: 90px;
 }
 .main .main-manifest {
-  background-image: url(/src/image/bg-main-manifest.png);
+  background-image: url(../image/bg-main-manifest.png);
   max-width: 100%;
   min-height: 37.5rem;
   background-repeat: no-repeat;
@@ -255,6 +255,9 @@ footer .footer-wrapper {
   display: flex;
   justify-content: space-between;
 }
+
+
+
 
 @media screen and (min-width: 1440px) {
   .nav-humburger {
