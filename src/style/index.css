@@ -52,7 +52,7 @@ header .nav .nav-ul .nav-li a {
   line-height: 64px;
   letter-spacing: 0.05em;
   color: #000000;
-  width: 50%;
+  width: 770px;
   padding-inline-start: 8.43rem;
 }
 .main .main-blog {
@@ -335,11 +335,29 @@ footer .footer-wrapper {
     justify-content: space-between;
     align-items: center;
   }
+  .fulltime {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .fulltime .fulltime-text {
+   align-self:flex-end;
+   text-align: end;
+  }
+  .main .main-manifest h1 {
+    padding-inline-start: 2.125rem;
+    width: 700px;
+  }
 }
 @media screen and (max-width: 767px) {
   header, .fulltime, .popular, .latest, .main .main-blog {
     padding-inline-start: 0.625rem;
     padding-inline-end: 0.625rem;
+  }
+  .main .main-manifest h1 {
+    padding-inline-start:  0.625rem;
+    width: 80%;
+    height: 200px;
   }
   .blog-item {
     flex-direction: column-reverse;
@@ -399,6 +417,14 @@ footer .footer-wrapper {
     padding-inline-end: 0.625rem;
     gap: 50px;
   }
+  .fulltime-title{
+    align-self:flex-start;
+    text-align: center;
+  }
+  .fulltime .fulltime-text {
+    align-self:flex-start;
+    text-align: center;
+   }
 }
 
 /*# sourceMappingURL=index.css.map */
