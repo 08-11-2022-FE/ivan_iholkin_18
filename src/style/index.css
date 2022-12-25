@@ -286,7 +286,7 @@ footer .footer-wrapper .need h5 {
   color: #000000;
   margin-bottom: 30px;
 }
-footer .footer-wrapper .need p {
+footer .footer-wrapper .need a {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -296,6 +296,8 @@ footer .footer-wrapper .need p {
   text-transform: uppercase;
   color: #000000;
   margin-bottom: 15px;
+  display: block;
+  text-decoration: none;
 }
 footer .footer-wrapper .social {
   display: flex;

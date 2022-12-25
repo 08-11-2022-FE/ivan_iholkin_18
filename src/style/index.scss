@@ -1,3 +1,4 @@
+
 @mixin fontRedHatDisplay {font-family: 'Red Hat Display';
                           font-style: normal;
                           color: #000000;}
@@ -246,7 +247,7 @@ header{
                 width: 100%;
                 max-width: 570px;
                 height: 260px;
-            }  
+            } 
             .wall-img{
                 background-image:url(/src/image/wall.png);
                 background-size:cover;
@@ -320,11 +321,14 @@ footer{
                     line-height: 64px;
                     letter-spacing: 0.05em;
                     color: #000000;
-                    margin-bottom: 30px
+                    margin-bottom: 30px;
+                   
                 }
-                p{
+                a{
                    @include fontLatoNormal;
                    margin-bottom: 15px;
+                   display: block;
+                   text-decoration: none;
                 }
             }
             .social{
