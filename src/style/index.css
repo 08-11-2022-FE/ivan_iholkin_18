@@ -86,6 +86,29 @@ header .nav .nav-ul .nav-li a {
   gap: 30px;
   max-width: 1170px;
 }
+.main .main-blog .blog-wrapper .blog-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main .main-blog .blog-wrapper .blog-text p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+.main .main-blog .blog-wrapper .blog-text h3 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
 
 .pointer-section .pointer {
   background-image: url(/src/image/imagepointerblog.png);
@@ -127,6 +150,16 @@ header .nav .nav-ul .nav-li a {
   display: flex;
   justify-content: space-between;
 }
+.latest .latest-tittle a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
 .latest .latest-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -160,12 +193,37 @@ header .nav .nav-ul .nav-li a {
 .latest .latest-wrapper .latest-item .img-captch {
   display: flex;
   justify-content: space-between;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
 }
 .latest .latest-wrapper .latest-item .latest-pointer {
   background-image: url(/src/image/imagepointerblog.png);
   background-size: cover;
   width: 100%;
   height: 260px;
+}
+.latest .latest-wrapper .latest-item .latest-text h4 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+.latest .latest-wrapper .latest-item .latest-text p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
 }
 
 .popular {
@@ -178,6 +236,16 @@ header .nav .nav-ul .nav-li a {
 .popular .popular-tittle {
   display: flex;
   justify-content: space-between;
+}
+.popular .popular-tittle a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
 }
 .popular .button {
   align-self: center;
@@ -225,6 +293,32 @@ header .nav .nav-ul .nav-li a {
   justify-content: space-between;
   width: 100%;
   max-width: 570px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+.popular .popular-wrapper .popular-item .popular-text h4 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  padding-bottom: 20px;
+}
+.popular .popular-wrapper .popular-item .popular-text p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
 }
 
 .fulltime {
@@ -326,11 +420,16 @@ footer .footer-wrapper .social li:hover a .icon {
   .nav-humburger {
     display: none;
   }
-  .blog-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(1170px, 1fr));
+  #blog-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 1439px) {
+  .main .main-manifest h1 {
+    padding-inline-start: 2.125rem;
+  }
   .nav-ul .nav-li {
     display: none;
   }
@@ -367,53 +466,94 @@ footer .footer-wrapper .social li:hover a .icon {
     justify-content: space-around;
     left: 50%;
   }
-  header, .fulltime, .popular, .latest, .main .main-blog {
-    padding-inline-start: 2.125rem;
-    padding-inline-end: 2.125rem;
-  }
-  .blog-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  .latest {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 8.43rem;
+    padding-inline-end: 8.43rem;
     gap: 50px;
-    width: 100%;
-    min-width: none;
   }
-  .blog-wrapper .blog-item {
-    height: 470px;
-    gap: 30px;
-    width: 100%;
-  }
-  footer {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+  .latest .latest-tittle {
     display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-  }
-  footer .need a {
-    text-align: center;
-  }
-  footer p {
-    align-self: center;
-  }
-  footer .footer-wrapper {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
   }
-  .fulltime {
-    flex-direction: column;
-    gap: 70px;
+  .latest .latest-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
   }
-  .fulltime .fulltime-text {
-    align-self: flex-end;
-    text-align: right;
-    max-width: 100%;
+  .latest .latest-wrapper .latest-item {
+    min-width: 100%;
+    min-height: 240px;
+    display: grid;
+    grid-template-areas: "img img img-captch img-captch" " img img text text";
+  }
+  .latest .latest-wrapper .latest-item .img-captch {
+    grid-area: img-captch;
+  }
+  .latest .latest-wrapper .latest-item .latest-text {
+    grid-area: text;
+  }
+  .latest .latest-wrapper .latest-item .latest-img {
+    grid-area: img;
+    width: 340px;
+    height: 270px;
   }
 }
+header, .fulltime, .popular, .latest, .main .main-blog {
+  padding-inline-start: 2.125rem;
+  padding-inline-end: 2.125rem;
+}
+
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 50px;
+  width: 100%;
+  min-width: none;
+}
+.blog-wrapper .blog-item {
+  height: 470px;
+  gap: 30px;
+  width: 100%;
+}
+
+footer {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+footer .need a {
+  text-align: center;
+}
+footer p {
+  align-self: center;
+}
+footer .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.fulltime {
+  flex-direction: column;
+  gap: 70px;
+}
+.fulltime .fulltime-text {
+  align-self: flex-end;
+  text-align: right;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 767px) {
+  .main .main-manifest h1 {
+    padding-inline-start: 0.625rem;
+  }
   header, .fulltime, .popular, .latest, .main .main-blog {
     padding-inline-start: 0.625rem;
     padding-inline-end: 0.625rem;
